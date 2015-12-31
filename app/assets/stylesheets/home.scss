@@ -8,7 +8,7 @@
 
 @font-face {
   	font-family: 'London';
-  	src: font-url('LondonBetween.ttf');
+  	src: url('<%= asset_path("LondonBetween.ttf")%>');
 	}
 
 /* --------------------------------------------
