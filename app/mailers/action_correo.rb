@@ -1,5 +1,5 @@
 class ActionCorreo < ApplicationMailer
-  default from: "lgurman@outlook.com"
+  default from: "mbcontable@zoho.com"
 
   def enviar_mail(user)
   	mail(to: user, subject: 'bla bla')
