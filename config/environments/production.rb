@@ -82,10 +82,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-   :address              => "smtp-mail.outlook.com",
+   :address              => "mail.thecraftbeertruck.com.ar",
    :port                 => 587,
-   :user_name            => 'lgurman@outlook.com',
-   :password             => 'Lichura111988$'
+   :user_name            => 'prueba@thecraftbeertruck.com.ar',
+   :password             => 'prueba2015'
    :authentication       => "plain",
    :enable_starttls_auto => true
   }
