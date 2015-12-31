@@ -1,0 +1,858 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+@font-face {
+  	font-family: 'London';
+
+  	src: url('LondonBetween.ttf');
+	}
+
+/* --------------------------------------------
+    Definicion del background del site 
+	Se define lo mismo para todos los dispositivos
+--------------------------------------------------*/
+*{
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	font-family: 'London', sans-serif;
+}
+
+body{
+	background-color: rgb(255,255,255);
+	font-size: 1em;
+	font-family: 'London', sans-serif;
+}
+
+
+/* ---------------------------------------
+   definicion de la barra de navegacion 
+   para dispositivos mayores a 700px
+   --------------------------------------*/
+nav{
+	/*height: 10vh;*/
+	width: 100%;
+	margin-top: 5%;
+	background-color: rgba(1, 1, 1, 0.6);
+	-webkit-transition: 1s;
+	transition: 1s;
+}
+
+nav.scrolled{
+	/*height: 8vh;*/
+	margin-top: 0%;
+	background-color: rgb(0,0,0);
+	-webkit-transition: 1s;
+	transition: 1s;
+}
+
+/*Modifico el css de bootstrap, navbar-nav contiene los links a las secciones de la pagina y navbar-brand es el logo*/
+
+.navbar-nav{
+	width: 50%;
+	margin-left: 10%;
+}
+
+
+nav ul{
+	position: relative;
+	margin: 0 0 0 15%;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*nav ul li{
+	float: left;
+	margin-right: 3%;
+	margin-top: 1%;
+}*/
+
+nav ul li:hover{
+	border-bottom: 2px solid orange;
+	margin-top: 0;
+	line-height: 10px;
+}
+
+nav ul li a{
+	font-size: 2em;
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+
+/*.nav-logo h2{
+	font-size: 1.5em;
+	color: white;
+	margin-left: 80%;
+	margin-top: 1.5%;
+	font-weight: normal;
+}*/
+
+/*.navbar-brand {
+	font-size: 1.5em;
+	color: white;
+	text-decoration: none;
+	margin-left: 800px;
+	margin-top: 20%;
+}*/
+
+
+
+/*-----------------------------------------------
+    Definicion de la seccion principal 
+-------------------------------------------*/
+/*  Lineamientos generales para todos los dispositivos */
+	.section-principal{
+		width: 100%;
+		position: relative;
+		background-image: url('back.jpg');
+	}
+	
+	.section-principal-nombre h1{
+		color: rgb(255,255,255);
+		position: absolute;
+	}
+
+	.section-principal-nombre h2{
+		color: rgb(255,255,255);
+		position: absolute;
+	}
+	
+	.formulario-consulta{
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding-top: 5%;
+	}
+	.formulario-consulta-titulo{
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		margin-bottom: 1%;
+		padding: 0;
+	}
+	.formulario-consulta span{
+		padding: 0%;
+		color:white;
+		margin-left: 50%;
+		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+		position: absolute;
+	}
+	
+	.formulario-consulta-contenido{
+		width: 100%;
+		height: 100%;
+		margin-top: 6%;
+	}
+	
+	.formulario-consulta input{
+		margin-left: 5%;
+		position: relative;
+		float: left;
+		color: black;
+		margin-bottom: 3%;
+		text-align: center;
+	}
+
+
+	
+	.formulario-consulta button{
+		margin-left: 5%;
+		position: relative;
+		float: left;
+		color: white;
+		margin-bottom: 5%;
+		background-color: orange;
+	}
+	
+/*-------------------------------------------------------------
+Se definen los lineamientos para pantallas superiores a 1200px
+-------------------------------------------------------------*/
+@media screen and (min-width: 768px){
+	.section-principal{
+		height: 100vh;
+	}
+
+	.section-principal-nombre h1{
+		margin-top: 300px;
+		margin-left: 150px;
+		font-size: 5em;
+	}
+	.section-principal-nombre h2{
+		font-size: 2em;
+		margin-top: 350px;
+		margin-left: 150px;	
+	}
+
+	.consultas{
+		width: 25%;
+		height: 60%;
+		position: absolute;
+		top: 30%;
+		left: 65%;
+	}
+
+	.formulario-consulta span{
+		font-size: 2em;
+		padding: 0%;
+		color:white;
+	}
+
+	.formulario-consulta input{
+		width: 90%;
+		height: 4vh;
+	}
+
+	.formulario-consulta-contenido{
+		margin-top: 10%;
+	}
+
+	#consulta{
+		height: 10vh;
+	}
+
+	.formulario-consulta button{
+		width: 90%;
+		height: 4vh;
+	}
+}
+
+/*---------------------------------------------------------------
+Se definen los lineamientos para pantallas inferiores a 750px
+-------------------------------------------------------------*/
+@media screen and (max-width: 768px){
+	.section-principal{
+		height: 100vh;
+	}
+	.section-principal-nombre{
+		width: 100%;
+		height: 20%;
+		margin-top:200px;
+		position: absolute;
+		margin-top: 150px;
+	}
+
+	.section-principal h1{
+		font-size: 4em;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+	}
+
+	.section-principal-nombre h2{
+		font-size: 1.6em;
+		position: absolute;
+		margin-top: 60px;
+		left: 50%;
+		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+	}
+
+
+	.consultas{
+		width: 80%;
+		height: 80%;
+		position: absolute;
+		top: 270px;
+		left: 10%;
+	}
+
+	.formulario-consulta{
+		padding-top: 1%;
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+	}
+
+	.formulario-consulta span{
+		font-size: 2em;
+		padding: 0%;
+		color:white;
+	}
+	.formulario-consulta input{
+		width: 90%;
+		height: 5vh;
+	}
+
+		#consulta{
+		height: 10vh;
+	}
+
+	.formulario-consulta button{
+		width: 90%;
+		height: 5vh;
+	}
+}
+
+
+/* ----------------------------------------------------
+   Definicion de la seccion de acerca de nosotros 
+   ----------------------------------------------------*/
+
+   	.section-about{
+	  width: 100%;
+	  margin: 2% 0 0 0;
+	  padding: 0 0 0 0;
+	  position: relative;
+	  color:rgb(50,50,50);
+	}
+	
+	.section-about h1{
+		color: rgb(83,83,83);
+		position: relative;
+	}
+
+   /*----------------------------------------------------------
+   Se definen los lineamientos para pantallas superiores a 1200px
+   -----------------------------------------------------------*/
+@media screen and (min-width: 768px){
+
+	.section-about{
+		height: 100vh;
+	}
+
+	.about-nombres img{
+		height: 70%;
+		position: relative;
+		float: left;
+		margin-top: 10px;
+		margin-left: 1%;
+	}
+	.section-about h1{
+		margin-left: 50%;
+		font-size: 3em;
+		margin-top: 1%;
+	}
+
+	.about-contenedor{
+	  width: 100%;
+	  height: 90vh;
+	  background-color: rgb(83, 83, 83);
+	  margin: 1% 0 10vh 0;
+	  padding: 0 0 0 0;
+	  position: absolute;
+	  -webkit-clip-path: polygon(100% 0%, 96% 50%, 100% 100%, 3% 90%, 0% 50%, 0% 0%);
+	  clip-path: polygon(100% 0%, 94% 50%, 100% 100%, 3% 86%, 0% 50%, 6% 13%);
+	  shape-outside: polygon(100% 0%, 94% 50%, 100% 100%, 3% 86%, 0% 50%, 6% 13%);
+	}
+
+	.about-persona{
+	  float: left;
+	  width: 35%;
+	  height: 300px;
+	  position: relative;
+	  margin-left: 10%;
+	  margin-top: 3%;
+		}
+	  
+	  .about-persona img{
+		width: 150px;
+		height: 150px;
+		border-radius: 50% 50% 5% 50%;
+		float: left;
+		margin-right:3%;
+	  }
+
+
+	.about-persona p {
+	  color: white;
+	  font-size: 1em;
+	  text-align: justify;
+	  z-index: 100;
+	  font-family: 'London', sans-serif;
+	  float: left;
+	  margin-top: 2%;
+	}
+
+	.about-nombres{
+		width: 100%;
+		height: 50px;
+		top: 80%;
+		background: rgba(255,255,255,0.5);
+		position: relative;
+	}
+
+
+	.about-nombres h1{
+	  font-size: 2em;
+	  float: left;
+	  color: white;
+	  margin-left: 30%;
+	  margin-top: 17px;
+	}
+
+	.about-persona-nombre h1{
+		color: white;
+		font-size: 2em;
+		margin-left: 0%;
+	}
+
+	.about-persona-nombre ul{
+		margin-left: 20%;
+		margin-top: 15%;
+		display: block;
+		position: relative;
+	}
+
+	.about-persona-nombre img{
+		height: 30px;
+		width: 30px;
+	}
+
+	.about-persona-nombre ul li{
+		list-style-type: none;
+	}
+
+}
+
+/*--------------------------------------
+defino los lineamientos para smartphones
+----------------------------------------*/
+@media screen and (max-width: 768px){
+
+	.section-about{
+		height: 165vh;
+	}
+	.section-about h1{
+		margin-left: 25%;
+		font-size: 3em;
+		margin-top: 2vh;
+	}
+	.about-contenedor{
+		height: 100%;
+		width: 100%;
+	}
+	.about-persona{
+	  float: left;
+	  width: 100%;
+	  height: 70vh;
+	  position: relative;
+	  padding-left: 3%;
+	  padding-right: 3%;
+	}
+	  
+	.about-persona img{
+		width: 30%;
+		border-radius: 50% 50% 5% 50%;
+		float: left;
+		margin-left: 1%;
+	}
+	
+	.about-persona p {
+	  color: rgb(0,0,0);
+	  font-size: 1em;
+	  text-align: justify;
+	  z-index: 100;
+	  float: left;
+	  margin-top: 3%;
+	}
+
+	.about-persona-nombre h1{
+		font-size: 2em;
+	}
+
+	.about-persona-nombre {
+		margin-left: 20%;
+	}
+
+	.about-persona-nombre img{
+		height: 30px;
+		width: 30px;
+		margin-left: 10%;
+	}
+
+	.about-persona-nombre ul li{
+		list-style-type: none;
+	}
+}
+/*----------------------------------------
+    definicion de la seccion de contable
+  ----------------------------------------*/
+.section-contable{
+	width: 100%;
+	position: relative;
+	color: white;
+	margin: 0 0 0 0;
+  	padding: 0 0 0 0;
+}
+.section-contable h1{
+	color: rgb(83,83,83);
+	position: relative;
+	margin-left: 10%;
+	font-size: 3em;
+}
+
+.servicios{
+	position: relative;
+	top: 10%;
+	margin-left: 4%;
+	border: 3px solid rgba(0,0,0,0.1);
+	float: left;
+}
+
+   /*Se definen los lineamientos para pantallas superiores a 1200px*/
+@media screen and (min-width: 1200px){
+	.section-contable{
+		height: 80vh;
+	}
+
+	.servicios{
+	}
+
+	.servicios img{
+		height: 100%;
+		width: 100%;
+		z-index: -100;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.servicios h3{
+		font-size: 5em;
+		top: 50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		border-left: 3px solid white;
+		border-right: 3px solid white;
+	}
+
+
+
+	.servicio-back p, .servicio-back li{
+		font-size: 1em;
+		text-align: justify;
+		margin: 0 4% 0 4%;
+		color: blue;
+		-webkit-filter: grayscale(50%);
+		filter: grayscale(50%);
+		font-family: 'London', sans-serif;
+	}
+
+	.servicio-back p{
+		margin-top: 10%;
+		font-family: 'London', sans-serif;
+	}
+
+	.servicio-back {
+		/*background-color:rgba(255,255,255,0.9);*/
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+
+	/* entire container, keeps perspective */
+	.servicios {
+		perspective: 1000;
+	}
+		/* flip the pane when hovered */
+		.servicios:hover .flipper, .servicios.hover .flipper {
+			transform: rotateY(180deg);
+		}
+
+	.servicios, .servicio-front, .servicio-back {
+		width: 350px;
+		height: 350px;
+	}
+
+	/* flip speed goes here */
+	.flipper {
+		transition: 0.6s;
+		transform-style: preserve-3d;
+
+		position: relative;
+	}
+
+	/* hide back of pane during swap */
+	.servicio-front, .servicio-back {
+		-webkit-backface-visibility: hidden;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	/* front pane, placed above back */
+	.servicio-front {
+		z-index: 2;
+		/* for firefox 31 */
+		transform: rotateY(0deg);
+	}
+
+	/* back, initially hidden pane */
+	.servicio-back {
+		transform: rotateY(180deg);
+	}
+
+	.servicio-other{
+		background: rgba(0,0,0,0.4);
+		height: 100%;
+		width: 100%;
+	}
+
+	.servicio-other p, .servicio-other ul{
+		font-size: 1.2em;
+		color: rgb(255,255,255);
+		margin-left: 5%;
+		margin-right: 5%;
+		position: absolute;
+		text-align: justify;
+		margin-top: 51%;
+		transform: translate(0, -50%);
+	}
+
+	.servicios-mobile{
+			display: none;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width:1200px){
+		.servicios{
+			display: none;
+		}
+
+		.section-contable{
+			height: 200vh;
+		}
+
+		.servicios-mobile{
+			margin-top: 10%;
+		}
+
+		.servicios-mobile-p{
+			color: black;
+			font-size: 0.8em;
+			margin: 0% 5% 0 5%;
+		}
+
+		.servicios-mobile-listas{
+			color: black;
+			font-size: 0.8em;
+			margin: 0% 5% 0 10%;
+
+		}
+	
+		.servicios h3{
+		font-size: 3em;
+		left:50%;
+		transform: translate(-50%);
+		position: absolute;
+	}
+}
+@media screen and (max-width: 768px){
+		.servicios{
+			display: none;
+		}
+
+		.section-contable{
+			height: 200vh;
+		}
+
+		.servicios-mobile{
+			margin-top: 10%;
+		}
+
+		.servicios-mobile-p{
+			color: black;
+			font-size: 0.8em;
+			margin: 0% 5% 0 5%;
+		}
+
+		.servicios-mobile-listas{
+			color: black;
+			font-size: 0.8em;
+			margin: 0% 5% 0 10%;
+
+		}
+	
+		.servicios h3{
+		font-size: 3em;
+		left:50%;
+		transform: translate(-50%);
+		position: absolute;
+	}
+}
+
+
+
+/* -----------------------------------
+	Se desarrolla la seccion de contacto
+	se va a armar en un div de 200px de alto
+	va a contener los datos de contacto y las redes sociales
+	-----------------------------------*/
+
+.section-contacto{
+	width: 100%;
+	background: rgb(255,255,255);
+	position: relative;
+}
+
+.contacto-noticias{
+	background: rgba(1,1,1,0.1);
+}
+
+.noticias-titulo{
+	background: rgba(255,255,255, 0.8);
+	position:relative;
+	margin-top: 0;
+	margin-left: 0;
+	width: 100%;
+	height: 10vh;
+	border-bottom: 2px solid rgb(200,200,200);
+	float: left;
+}
+
+.noticias-titulo h1{
+	color: rgb(50,50,50);
+	font-size: 2em;
+	text-align: center;
+	margin-top: 3vh;
+	font-family: 'London', sans-serif;
+}
+
+.noticias-cuerpo {
+	float: left;
+	position: relative;
+	margin: 5% 5% 5% 8%;
+	overflow-y: scroll;
+	height: 55vh;
+	width: 90%;
+	color: white;
+}
+
+.noticias-noticia{
+	margin-top: 3%;
+	width: 90%;
+	border-bottom: 2px solid rgb(200,200,200);
+}
+
+.noticias-noticia h3{
+	font-size: 1em;
+	color: rgb(50,50,50);
+	font-family: 'London', sans-serif;
+}
+
+.noticias-noticia h4{
+	font-size: 0.8em;
+	color: rgb(255,255,255);
+	font-family: 'London', sans-serif;
+}
+
+.noticias-noticia p{
+	color: rgb(50,50,50);
+	text-align: justify;
+}
+
+.contacto-datos{
+	background: rgba(0,0,0,0.2);
+}
+
+.contacto-datos img{
+	margin-top: 0;
+	margin-left: 0;
+	position: relative;
+}
+
+.contacto-datos-texto{
+	margin-top: 2%;
+	color: rgb(255,255,255);
+	text-align: center;
+	font-family: 'London', sans-serif;
+}
+
+@media screen and (min-width:768px){
+	.section-contacto{
+		height: 100vh;
+	}
+
+	.contacto-noticias{
+		width: 40%;
+		height: 70vh;
+		margin-top: 50px;
+		margin-left: 5%;
+		position: absolute;
+	}
+
+	.contacto-datos{
+		width: 40%;
+		height: 70vh;
+		position: absolute;
+		margin-top: 50px;
+		margin-left: 55%
+	}
+
+	.contacto-datos img{
+		width: 100%;
+		height: 75%;
+	}
+}
+
+@media screen and (max-width:768px){
+	.section-contacto{
+			height: 165vh;
+			width: 100%;
+	}
+
+	.contacto-noticias{
+		width: 80%;
+		height: 70vh;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+		float: left;
+	}
+
+	.contacto-datos{
+		width: 80%;
+		height: 80vh;
+		float: left;
+		margin-top: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.contacto-datos img{
+		width: 100%;
+		height: 400px;
+	}
+}
+
+
+/*----------------------------------------
+---------------Footer---------------------
+----------------------------------------*/
+
+footer{
+	height: 15vh;
+	width: 100%;
+	background: rgb(83,83,83);
+	color: rgb(255,255,255);
+}
+
+footer span{
+	font-size: 1em;
+	margin-top: 6vh;
+	margin-left: 3vw;
+	position: absolute;
+	color: rgb(255,255,255);
+}
+
+.redes-sociales{
+	position: absolute;
+	margin-left: 80vw;
+	margin-top: 3vh;
+	color: rgb(255,255,255);
+}
+
+.redes-sociales img{
+	width: 40px;
+	height: 40px;
+}
+

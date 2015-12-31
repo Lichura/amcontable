@@ -22,7 +22,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'capybara', '~> 2.4.4'
+gem 'poltergeist', '~> 1.6.0'
+gem 'phantomjs', '~> 1.9.8.0'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,3 +48,4 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'httparty'
