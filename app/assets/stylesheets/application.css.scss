@@ -11,9 +11,12 @@
  * file per style scope.
  *
  *= require bootstrap.min
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
 
-
+@font-face {
+  	font-family: 'London';
+  	src: font-url( asset_path("LondonBetween.ttf"));
+	}
 
