@@ -1,4 +1,4 @@
-require 'HTTParty'
+#require 'HTTParty'
 
 class Noticias
 	include HTTParty

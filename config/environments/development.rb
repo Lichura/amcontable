@@ -45,7 +45,8 @@ Rails.application.configure do
    :address              => "mail.thecraftbeertruck.com.ar",
    :port                 => 587,
    :user_name            => 'prueba@thecraftbeertruck.com.ar',
-   :password             => 'prueba2015'
+   :password             => 'prueba2015',
    :authentication       => "plain",
    :enable_starttls_auto => true
+ }
 end
