@@ -78,7 +78,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #config.assets.precompile = ['*.js', '*.css', '*.css.erb']
-
+  #supuestamente con esto se precompilan los assets
+  config.serve_static_assets = true
   config.action_mailer.delivery_method = :smtp
 # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
