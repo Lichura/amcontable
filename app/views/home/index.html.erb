@@ -39,16 +39,17 @@
 				<h2>Auditoría - Impuestos - Consultoría</h2>
 			</div>
 			<div class="consultas">
-				<form class="formulario-consulta">
+				<div class="formulario-consulta">
 					<div class="formulario-consulta-titulo"><span>Consultas</span></div>
-					<div class="formulario-consulta-contenido">
-					<input placeholder="Nombre y Apellido"></input>
-					<input name="mail" <%= @mail %> placeholder="Mail"></input>
-					<input placeholder="Telefono"></input>
-					<input id="consulta" placeholder="Consulta"></input>
-					<button type="submit">ENVIAR</button>
+					<%= form_for :consulta, :url => { :action => 'create' }, :class => 'formulario-consula-contenido' do |f| %>
+						<%= f.text_field :name, :class => 'input', :placeholder => 'Nombre y Apellido'%>
+						<%= f.text_field :mail, :class => 'input', :placeholder => 'juan@correo.com'%>
+						<%= f.text_field :telefono, :class => 'input', :placeholder => '(011)4123-5678' %>
+						<%= f.text_field :consulta, :class => 'input', :placeholder => 'Ingrese su consulta'%>
+						<%= f.submit 'Enviar', :class => 'button' %> 
+					<%end%>
+					</div>
 				</div>
-				</form>
 			</div>
 		</div>
 		<div class="section-about" id="about">

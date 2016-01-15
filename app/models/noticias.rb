@@ -13,3 +13,4 @@ class Noticias
 	end
 
 end
+

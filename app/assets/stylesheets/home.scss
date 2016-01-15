@@ -7,8 +7,8 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
 @font-face {
-  	font-family: 'London';
-  	src: url(("LondonBetween.ttf")');
+  	font-family: 'London', 'sans-serif';
+  	src: url("LondonBetween.ttf");
 	}
 
 /* --------------------------------------------
@@ -148,7 +148,7 @@ nav ul li a{
 		margin-top: 6%;
 	}
 	
-	.formulario-consulta input{
+	.formulario-consulta .input{
 		margin-left: 5%;
 		position: relative;
 		float: left;
@@ -159,7 +159,7 @@ nav ul li a{
 
 
 	
-	.formulario-consulta button{
+	.formulario-consulta .button{
 		margin-left: 5%;
 		position: relative;
 		float: left;
@@ -201,7 +201,7 @@ Se definen los lineamientos para pantallas superiores a 1200px
 		color:white;
 	}
 
-	.formulario-consulta input{
+	.formulario-consulta .input{
 		width: 90%;
 		height: 4vh;
 	}
@@ -214,7 +214,7 @@ Se definen los lineamientos para pantallas superiores a 1200px
 		height: 10vh;
 	}
 
-	.formulario-consulta button{
+	.formulario-consulta .button{
 		width: 90%;
 		height: 4vh;
 	}
@@ -230,26 +230,27 @@ Se definen los lineamientos para pantallas inferiores a 750px
 	.section-principal-nombre{
 		width: 100%;
 		height: 20%;
-		margin-top:200px;
-		position: absolute;
-		margin-top: 150px;
-	}
-
-	.section-principal h1{
-		font-size: 4em;
+		margin-top:150px;
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%);
 		-webkit-transform: translate(-50%);
+	}
+
+	.section-principal-nombre h1{
+		font-size: 4em;
+		width: 100%;
+		text-align: center;
+
+
 	}
 
 	.section-principal-nombre h2{
 		font-size: 1.6em;
-		position: absolute;
+		width: 100%;
 		margin-top: 60px;
-		left: 50%;
-		transform: translate(-50%);
-		-webkit-transform: translate(-50%);
+		text-align: center;
+
 	}
 
 
@@ -262,7 +263,7 @@ Se definen los lineamientos para pantallas inferiores a 750px
 	}
 
 	.formulario-consulta{
-		padding-top: 1%;
+		padding-top: 4%;
 		width: 100%;
 		left: 50%;
 		transform: translate(-50%);
@@ -274,7 +275,7 @@ Se definen los lineamientos para pantallas inferiores a 750px
 		padding: 0%;
 		color:white;
 	}
-	.formulario-consulta input{
+	.formulario-consulta .input{
 		width: 90%;
 		height: 5vh;
 	}
@@ -283,7 +284,7 @@ Se definen los lineamientos para pantallas inferiores a 750px
 		height: 10vh;
 	}
 
-	.formulario-consulta button{
+	.formulario-consulta .button{
 		width: 90%;
 		height: 5vh;
 	}
@@ -416,7 +417,7 @@ defino los lineamientos para smartphones
 @media screen and (max-width: 768px){
 
 	.section-about{
-		height: 165vh;
+		height: 155vh;
 	}
 	.section-about h1{
 		margin-left: 25%;
@@ -477,7 +478,7 @@ defino los lineamientos para smartphones
 	width: 100%;
 	position: relative;
 	color: white;
-	margin: 0 0 0 0;
+	margin: 10% 0 0 0;
   	padding: 0 0 0 0;
 }
 .section-contable h1{
@@ -638,11 +639,10 @@ defino los lineamientos para smartphones
 
 		}
 	
-		.servicios h3{
+		.servicios-mobile h3{
 		font-size: 3em;
-		left:50%;
-		transform: translate(-50%);
-		position: absolute;
+		padding-left: 5%;
+		color: rgb(20,20,20)
 	}
 }
 @media screen and (max-width: 768px){
@@ -671,11 +671,10 @@ defino los lineamientos para smartphones
 
 		}
 	
-		.servicios h3{
-		font-size: 3em;
-		left:50%;
-		transform: translate(-50%);
-		position: absolute;
+		.servicios-mobile h3{
+		font-size: 2.5em;
+		padding-left: 5%;
+		color: rgb(20,20,20)
 	}
 }
 
