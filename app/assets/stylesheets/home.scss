@@ -148,7 +148,7 @@ nav ul li a{
 		margin-top: 6%;
 	}
 	
-	.formulario-consulta .input{
+	.formulario-consulta-contenido .input{
 		margin-left: 5%;
 		position: relative;
 		float: left;
@@ -159,7 +159,7 @@ nav ul li a{
 
 
 	
-	.formulario-consulta .button{
+	.formulario-consulta-contenido .button{
 		margin-left: 5%;
 		position: relative;
 		float: left;
@@ -201,7 +201,7 @@ Se definen los lineamientos para pantallas superiores a 1200px
 		color:white;
 	}
 
-	.formulario-consulta .input{
+	.formulario-consulta-contenido .input{
 		width: 90%;
 		height: 4vh;
 	}
@@ -214,9 +214,10 @@ Se definen los lineamientos para pantallas superiores a 1200px
 		height: 10vh;
 	}
 
-	.formulario-consulta .button{
+	.formulario-consulta-contenido .button{
 		width: 90%;
 		height: 4vh;
+		background-color: orange;
 	}
 }
 
