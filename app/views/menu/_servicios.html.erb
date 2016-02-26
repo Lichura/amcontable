@@ -1,0 +1,9 @@
+<h1>servicios</h1>
+
+<% @servicios.each do |servicio| %>
+<h2><%= servicio.nombre %></h2>
+<p><%= servicio.foto_front %></p>
+<p><%= servicio.foto_back %></p>
+<p><%= servicio.descripcion %></p>
+<% end %>
+

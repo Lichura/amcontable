@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Servicios Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Servicios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servicios_lists.each do |servicios_list| %>
+      <tr>
+        <td><%= servicios_list.descripcion %></td>
+        <td><%= servicios_list.servicio_id %></td>
+        <td><%= link_to 'Mostrar', servicios_list %></td>
+        <td><%= link_to 'Editar', edit_servicios_list_path(servicios_list) %></td>
+        <td><%= link_to 'Eliminar', servicios_list, method: :delete, data: { confirm: 'Esta seguro de eliminar la lista?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Servicios list', new_servicios_list_path %>

@@ -13,31 +13,54 @@ $(document).ready(function(){
 		    	});
 			});
 
-			// Para cada tipo de servicio, cargo en htmls aparte lo que se va a mostrar
-			$("#servicios-auditoria").mouseover(function(){
-				$("#servicios-impuestos").load("div1_p.html")
-				$("#servicios-consulting").load("div1_ul.html")
+			/*function servicios(servicio, servicio1, texto){
+				servicio.mouseover(function(){
+					servicio1.addClass('color');
+					servicio1.html(texto);
+				}).mouseleave(functio(){
+					servicio1.addClass('color');
+					servicio1.html(texto);
+				});
+			};*/
+			//Declaro las variables para utilizar
+			var auditoria_list = $("#Auditoria_list").html();
+			var impuestos_list = $("#Impuestos_list").html();
+			var consultoria_list = $("#Consulting_list").html();
+			var auditoria_desc = $("#Auditoria_desc").html();
+			var impuestos_desc = $("#Impuestos_desc").html();
+			var consultoria_desc = $("#Consulting_desc").html();
+			var impuestos = $("#servicios-Impuestos").html();
+			var auditoria = $("#servicios-Auditoria").html();
+			var consultoria = $("#servicios-Consulting").html();
+
+			$("#servicios-Auditoria").mouseover(function(){
+				$(".servicios").addClass('color');
+				$("#servicios-Impuestos").html(auditoria_desc);
+				$("#servicios-Consulting").html(auditoria_list);
 			}).mouseleave(function(){
-				$("#servicios-impuestos").load("impuestos.html");
-				$("#servicios-consulting").load("consulting.html");
+				$(".servicios").removeClass('color');
+				$("#servicios-Impuestos").html(impuestos);
+				$("#servicios-Consulting").html(consultoria);
 			});
 
-
-			$("#servicios-impuestos").mouseenter(function(){
-				$("#servicios-auditoria").load("div2_p.html");
-				$("#servicios-consulting").load("div2_ul.html");
+			$("#servicios-Impuestos").mouseover(function(){
+				$(".servicios").addClass('color');
+				$("#servicios-Auditoria").html(impuestos_desc);
+				$("#servicios-Consulting").html(impuestos_list);
 			}).mouseleave(function(){
-				$("#servicios-auditoria").load("auditoria.html");
-				$("#servicios-consulting").load("consulting.html");
+				$(".servicios").removeClass('color');
+				$("#servicios-Auditoria").html(auditoria);
+				$("#servicios-Consulting").html(consultoria);
 			});
 
-
-			$("#servicios-consulting").mouseenter(function(){
-				$("#servicios-auditoria").load("div3_p.html");
-				$("#servicios-impuestos").load("div3_ul.html");
+			$("#servicios-Consulting").mouseover(function(){
+				$(".servicios").addClass('color');
+				$("#servicios-Auditoria").html(consultoria_desc);
+				$("#servicios-Impuestos").html(consultoria_list);
 			}).mouseleave(function(){
-				$("#servicios-impuestos").load("impuestos.html");
-				$("#servicios-auditoria").load("auditoria.html");
+				$(".servicios").removeClass('color');
+				$("#servicios-Auditoria").html(auditoria);
+				$("#servicios-Impuestos").html(impuestos);
 			});
 
 

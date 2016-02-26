@@ -1,0 +1,19 @@
+
+<table>
+	<tr>
+		<th>nombre</th>
+		<th>mail</th>
+		<th>telefono</th>
+		<th>consulta</th>
+	</tr>
+
+<% @mensajes.each do |mensaje| %>
+<tr>
+	<td><p><%= mensaje.nombre %></p></td>
+	<td><p><%= mensaje.mail %></p></td>
+	<td><p><%= mensaje.telefono %></p></td>
+	<td><p><%= mensaje.consulta %></p></td>
+	<td><%= link_to "Mostrar", :action => 'mostrar' , :id => mensaje, :remote => true %><td>
+</tr>
+<% end %>
+</table>

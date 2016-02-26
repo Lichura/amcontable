@@ -127,28 +127,29 @@ nav ul li a{
 		padding-top: 5%;
 	}
 	.formulario-consulta-titulo{
-		position: absolute;
 		width: 100%;
 		height: 10%;
 		margin-bottom: 1%;
 		padding: 0;
 	}
 	.formulario-consulta span{
+		width: 100%;
 		padding: 0%;
 		color:white;
+		/*text-align: center;
 		margin-left: 50%;
 		transform: translate(-50%);
 		-webkit-transform: translate(-50%);
-		position: absolute;
+		position: absolute;*/
 	}
 	
 	.formulario-consulta-contenido{
 		width: 100%;
 		height: 100%;
-		margin-top: 6%;
+		margin-top: 10%;
 	}
 	
-	.formulario-consulta-contenido .input{
+	.formulario-consulta .input{
 		margin-left: 5%;
 		position: relative;
 		float: left;
@@ -159,7 +160,7 @@ nav ul li a{
 
 
 	
-	.formulario-consulta-contenido .button{
+	.formulario-consulta .button{
 		margin-left: 5%;
 		position: relative;
 		float: left;
@@ -194,14 +195,19 @@ Se definen los lineamientos para pantallas superiores a 1200px
 		top: 30%;
 		left: 65%;
 	}
+	.formulario-consulta-titulo{
+		text-align: center;
+		width: 100%;
+	}
 
 	.formulario-consulta span{
 		font-size: 2em;
 		padding: 0%;
 		color:white;
+		/*text-align: center;*/
 	}
 
-	.formulario-consulta-contenido .input{
+	.formulario-consulta .input{
 		width: 90%;
 		height: 4vh;
 	}
@@ -214,7 +220,7 @@ Se definen los lineamientos para pantallas superiores a 1200px
 		height: 10vh;
 	}
 
-	.formulario-consulta-contenido .button{
+	.formulario-consulta .button{
 		width: 90%;
 		height: 4vh;
 		background-color: orange;
@@ -263,12 +269,13 @@ Se definen los lineamientos para pantallas inferiores a 750px
 		left: 10%;
 	}
 
-	.formulario-consulta{
-		padding-top: 4%;
+	.formulario-consulta-titulo{
+		/*padding-top: 4%;*/
+		text-align: center;
 		width: 100%;
-		left: 50%;
+		/*left: 50%;
 		transform: translate(-50%);
-		-webkit-transform: translate(-50%);
+		-webkit-transform: translate(-50%);*/
 	}
 
 	.formulario-consulta span{
@@ -497,6 +504,10 @@ defino los lineamientos para smartphones
 	float: left;
 }
 
+.servicios.color{
+	color: black;
+}
+
    /*Se definen los lineamientos para pantallas superiores a 1200px*/
 @media screen and (min-width: 1200px){
 	.section-contable{
@@ -611,6 +622,7 @@ defino los lineamientos para smartphones
 	.servicios-mobile{
 			display: none;
 	}
+
 
 }
 
@@ -853,5 +865,6 @@ footer span{
 .redes-sociales img{
 	width: 40px;
 	height: 40px;
+	border-radius: 50% 50% 5% 50%;
 }
 

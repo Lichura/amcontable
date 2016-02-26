@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
 
 
+  resources :mensajes
+  resources :servicios_lists
+  resources :servicios
+  resources :personas
   get 'home/new' => redirect("#index")
 
   get 'home/index'
+
+  get 'menu/index'
+  get 'menu/mensajes'
+  get 'menu/servicios'
+  get 'menu/nosotros'
+  get 'menu/mostrar'
 
   #post 'contact/new'
   #get 'courses/index'
@@ -17,6 +27,7 @@ Rails.application.routes.draw do
    post 'consulta' => 'home#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+      get 'mensajes/:id' => 'show#menu'
 
   #get 'index' => "home#index"
   # Example of named route that can be invoked with purchase_url(id: product.id)
@@ -42,6 +53,10 @@ Rails.application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
+
+    resources :servicios do
+      resources :servicios_lists
+    end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
